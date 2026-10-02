@@ -30,7 +30,7 @@ function getBoardMarkup($board_data, int $player_x = 0, int $player_y = 0){
         }
     }
 
-    $output .= '<div class="player-tile" style="grid-column:'.($player_x + 1).'; grid-row:'.($player_y + 1).';"></div>';
+    $output .= '<div class="player-tile" style="left:'.($player_x * 16).'px; top:'.($player_y * 16).'px;"></div>';
 
     $output .= '</div>';
 

@@ -25,6 +25,7 @@
             background-color: red;
             /*width: '<?php echo $num_columns * 16 ?>px';
             height: '<?php echo $num_rows * 16 ?>px';*/
+            position: relative;
             display: grid;
             grid-template-columns: repeat(<?php echo $num_columns; ?>, 16px);
             grid-template-rows: repeat(<?php echo $num_rows; ?>, 16px);
@@ -43,6 +44,9 @@
         }
 
         .player-tile {
+            position: absolute;
+            width: 16px;
+            height: 16px;
             background-image: url(./public/img/PngItem_252747.png);
             background-size: cover;
             z-index: 1;
