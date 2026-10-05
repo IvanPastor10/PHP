@@ -3,6 +3,7 @@
 /** @var String $num_columns
  *  @var String $num_rows
  *  @var String $board_markup
+ *  @var String $controls_markup
  */
 ?>
 <!DOCTYPE html>
@@ -36,6 +37,46 @@
             background-color: blue;
             width: 215px;
             height: 215px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 8px;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        .controls-container a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .controls-container a:nth-child(1) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .controls-container a:nth-child(2) {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .controls-container a:nth-child(3) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .controls-container a:nth-child(4) {
+            grid-column: 3;
+            grid-row: 2;
         }
 
         .tile {
@@ -260,7 +301,7 @@
         <h1>Zelda 40th Anniversary</h1>
         <?php echo $board_markup; ?>
         <div class="controls-container">
-
+            <?php echo $controls_markup; ?>
         </div>
     </main>
 
